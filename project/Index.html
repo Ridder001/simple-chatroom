@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Simple Chatroom</title>
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+   <script src="https://unpkg.com/@popperjs/core@2"></script>
+   <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+<body>
+   <div class="container">
+      <h1>Simple Chatroom</h1>
+      <!--Chatbox-->
+      <div class="chat" id="chat">
+
+      </div>
+      <!--form-->
+      <form id="chatform">
+         <div class="email">
+            <label for="email">YOUR EMAIL&ast;</label>
+            <input type="email" name="email" id="email" required>
+         </div>
+         <div class="comment">
+            <label for="comment">YOUR COMMENT&ast;</label>
+            <textarea name="comment" id="comment" required></textarea>
+         </div>
+         <button type="submit" id="submit">ADD COMMENT</button>
+         <button type="reset" id="clear">RESET CHAT</button>
+      </form>
+
+      <!--Theme radio buttons-->
+      <input type="radio" id="light" name="theme" value="light" checked>
+      <label for="light">Light</label>
+      <input type="radio" id="dark" name="theme" value="dark">
+      <label for="dark">Dark</label>
+
+   <!--gif pop up-->
+   </div>   
+   <div id="gif-modal">
+      <div class="modal-content">
+         <span id="close-modal">&times;</span>
+         <div id="gif-container"></div>
+      </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>

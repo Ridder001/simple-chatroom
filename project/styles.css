@@ -1,0 +1,129 @@
+/* base theme color */
+
+:root {
+   --bg-color: #bfe;
+   --text-color: #000;
+   --input-bg: #eee;
+   --border-color: #000;
+   --modal-background: #eee;
+}
+
+/* base style */
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+   display: flex;
+   justify-content: center;
+}
+
+
+.container {
+   width: 400px;
+   text-align: center;
+}
+
+h1 {
+   font-weight: 400;
+}
+
+.chat {
+   height: 300px;
+
+   /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y */
+
+   overflow-y: scroll;
+   overflow-x: scroll;
+   text-align: left;
+   margin: 20px 0;
+}
+
+#chatform {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin: 20px 0;
+}
+
+#comment {
+   height: 100px;
+   resize: none;
+}
+
+.email,
+.comment {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+}
+
+.chat,
+#email,
+#comment,
+#submit,
+#clear {
+   background-color: var(--input-bg);
+   border: 1px solid var(--border-color);
+   color: var(--text-color);
+}
+
+.user_message {
+   display: flex;
+   align-items: center;
+}
+
+.user_image {
+   border-radius: 50%;
+   width: 40px;
+   margin: 10px;
+}
+
+/* gif modal style */
+
+#gif-modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1000;
+}
+
+.modal-content {
+   background: var(--modal-background);
+   padding: 20px;
+   margin: 10% 20%;
+   position: relative;
+}
+
+#close-modal {
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+.user_gif {
+   cursor: pointer;
+   max-width: 100%;
+   object-fit: contain;
+   margin: 5px;
+}
+
+#submit,
+#clear {
+   cursor: pointer;
+}
+
+/* dark theme */
+
+body.dark {
+   --bg-color: #043;
+   --text-color: #eee;
+   --input-bg: #000;
+   --border-color: #eee;
+   --modal-background: #000;
+}
