@@ -1,2 +1,0 @@
-# simple-chatroom
-chat

@@ -1,3 +1,0 @@
-# Dynamic Web Development
-
-## Project
